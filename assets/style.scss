@@ -1,0 +1,820 @@
+/* #######################################
+
+    CONFIGURAÇÕES
+
+####################################### */
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+$padrao: #070a14;
+$padraoClaro: #212635;
+$padraoClaro_v2: #282e40;
+$secundaria: #0f1320;
+
+$bg-color: #37474f;
+
+$borda-tabela: $padrao;
+
+$verde: #00ff66;
+$verdeLimao: #32CD32;
+$vermelho: #ff001e;
+
+$branco-fundo: #fff;
+$branco-texto: #fff;
+
+$maxMobile: 991px;
+$minDesktop: 992px;
+
+/* ------------------------------
+   Global styles
+---------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ body {
+    line-height: 1;
+}
+ ol, ul {
+    list-style: none;
+}
+ blockquote, q {
+    quotes: none;
+}
+ blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+ table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0;
+    background-color: #191D28;
+}
+ img {
+    max-width: 100%;
+}
+ a, a:hover, a:focus {
+    cursor: pointer !important;
+    outline: none;
+    text-decoration: none;
+}
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #1e2c34;
+    margin: 0;
+    padding: 0;
+}
+ ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ strong {
+    font-weight: 700;
+}
+
+
+/* #######################################
+
+    BÁSICO
+
+####################################### */
+
+html { height: 100%; }
+html,body { background: $padrao; }
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: $branco-texto;
+    height: 100%;
+
+}
+
+// Link Padrão
+a {
+    color: $verde;
+    &:hover {
+        color: #fff;
+    }
+    &.tudo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Remover linha no Focus
+*:focus {
+    outline: 0 !important;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/* #######################################
+
+    MENU
+
+####################################### */
+
+.active_sc {
+    background: #1e222d !important;
+    box-shadow: -3px 13px 24px -1px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 2s;
+    padding-top: 10px !important;
+    z-index: 9999;
+    transition: 0.3s all;
+}
+
+.navbar {
+    &.active_sc .navbar-brand {
+        padding-top: 0;
+    } 
+    &.navbar-expand-lg {
+        background: none;
+        transition: 0.3s all;
+        z-index: 999;
+        padding-top: 20px;
+        .nav-item a:hover {
+        color: #ffffff;
+        }
+    }
+    .navbar-toggler {
+        color: #ffffff;
+        border: 1px solid #ffffff;
+    }
+}
+
+.navbar-light .navbar-brand {
+    padding-top: 10px;
+}
+
+.navbar {
+    .nav-item a {
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        text-transform: capitalize;
+        text-transform: uppercase;
+    }
+    .navbar-nav {
+        .active > .nav-link {
+            color: $verde;
+            text-decoration: underline;
+        }
+        .nav-link {
+        &.active, &.show {
+            color: $verde;
+            text-decoration: underline;
+        }
+        }
+        .show > .nav-link {
+            color: $verde;
+            text-decoration: underline;
+        }
+    }
+}
+
+.active_sc {
+    background: #1e222d !important;
+    box-shadow: -3px 13px 24px -1px $secundaria;
+    padding-top: 10px !important;
+}
+
+/* #######################################
+
+    HEADER
+
+####################################### */
+
+.hero-section {
+    width: 100%;
+    padding-top: 180px;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+
+    .pos-r {
+        position: relative;
+    }
+    h1 {
+        color: #ffffff;
+        font-weight: 700;
+        line-height: 1.2em;
+        font-size: 48px;
+        @media only screen and (max-width: 767px) {
+            font-size: 36px;
+        }
+        b {
+            color: $verde;
+        }
+    }
+    p {
+        color: #ffffff;
+        padding-top: 28px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.7em;
+        @media only screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+
+    .btn-group .btn {
+        margin-top: 28px;
+        background-color: $verde;
+        color: $padrao;
+        padding: 12px 36px;
+        font-weight: 600;
+        font-size: 14px;
+        outline: 0;
+
+        &:nth-child(2) {
+            margin-left: 30px;
+            background: none;
+            color: $verde;
+            border: 1px solid $verde;
+            
+            @media only screen and (max-width: 400px) {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .banner-app-mock {
+        position: relative;
+        // width: 272px;
+        // height: 547px;
+        width: auto;
+        max-width: 640px;
+
+        .main-img {
+            margin-top: 20px;
+            width: 240px;
+            height: 520px;
+            margin-left: 15px;
+        }
+        .mockup {
+            width: 272px;
+            height: 552px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+        }
+    }
+    .mobile-graphic {
+        width: 100%;
+        position: absolute;
+        left: -20px;
+        top: 0;
+        z-index: -2;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero-section .pos-r {
+        margin-top: 60px;
+    }
+}
+
+/* #######################################
+
+    CARACTERISTICAS
+
+####################################### */
+
+.app-feature-sec {
+    width: 100%;
+    padding-top: 120px;
+    position: relative;
+    .title {
+        text-align: center;
+    }
+}
+ .title {
+    padding-bottom: 90px;
+    width: 100%;
+    h3 {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.2em;
+        padding-bottom: 20px;
+    }
+    p {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+ .app-mock-up-img {
+    position: relative;
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+}
+ .banner-app-mock {
+    position: relative;
+    width: 272px;
+    .mockup {
+        width: 272px;
+        height: 552px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+    }
+    .main-img {
+        margin-top: 20px;
+        width: 240px;
+        height: 520px;
+        margin-left: 15px;
+    }
+}
+.app-mock-up-img .mobile-graphic {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+
+}
+/*end mobile mock*/
+ .feature-inside {
+     ul li {
+        width: 100%;
+        padding-bottom: 45px;
+        position: relative;
+        padding-left: 70px;
+        h4 {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.2em;
+            padding-bottom: 14px;
+        }
+            p {
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 16px;
+        }
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+        }
+            &:hover h4 {
+                color: $verde;
+        }
+    }
+    .btn-group .btn {
+        background-color: $verde;
+        color: $padrao;
+        padding: 10px;
+        padding-left: 45px;
+        padding-right: 18px;
+        margin-right: 20px;
+        position: relative;
+        text-align: left;
+        font-weight: 600;
+        font-size: 14px;
+        min-width: 170px;
+        i {
+            position: absolute;
+            left: 8px;
+            top: 18px;
+        }
+    }
+}
+
+
+/* #######################################
+
+    SOBRE
+
+####################################### */
+
+.about-app-sec {
+    width: 100%;
+	padding-top: 120px;
+	overflow: hidden;
+	position: relative;
+}
+
+.special-graphic {
+    position: relative;
+	.mock {
+        position: absolute;
+		max-width: 102%;
+		left: -1px;
+		top: -2px;
+	}
+}
+
+.about-app-sec .title {
+    p {
+        padding-bottom: 24px;
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.btn {
+        color: $padrao;
+		background-color: $verde;
+		padding: 18px 36px;
+		font-weight: 600;
+		font-size: 14px;
+	}
+}
+
+/* #######################################
+
+    Start Screenshot app style
+
+####################################### */
+
+.app-screenshot-sec {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+    .owl-carousel {
+        .owl-dots {
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button.owl-dot {
+            background-color: $verde;
+            width: 15px;
+            height: 15px;
+            margin: 10px;
+            outline: 0;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            position: relative;
+        }
+    }
+    .owl-dot.active:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left: -4.2px;
+        top: -5px;
+        border: 1px solid $verde;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
+}
+
+/* #######################################
+
+    Start Fun fact style
+
+####################################### */
+
+.fun-fact {
+    width: 100%;
+    padding: 120px 0;
+    position: relative;
+    z-index: 9;
+    background-image: url(image/fun-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #000000;
+        opacity: 0.8;
+        z-index: -9;
+    }
+}
+
+.single-fact {
+    width: 100%;
+    text-align: center;
+    h2 {
+        font-weight: 600;
+        color: $verde;
+        font-size: 60px;
+        padding-bottom: 10px;
+        line-height: 1.2em;
+    }
+    h5 {
+        color: $verde;
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+
+/* #######################################
+
+    Contato
+
+####################################### */
+
+.contactus-sec {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 9;
+}
+
+#map {
+    width: 100%;
+    height: 490px;
+    position: absolute;
+    left: 0;
+    top: 320px;
+    z-index: -9;
+    background-image: url(image/soccer-header.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.contactus-sec .inside-contact {
+    background-color: #191d28;
+    padding: 30px 36px;
+    margin-top: 170px;
+    box-shadow: 0 0 11px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form {
+    input, textarea {
+        width: 100%;
+        font-size: 12px;
+        color: #66788b;
+        border: 1px solid #66788b;
+        outline: 0;
+        padding: 10px;
+        background: none;
+    }
+}
+
+.help-block.with-errors {
+    color: red;
+}
+
+.contact-form .btn {
+    opacity: 1;
+    padding: 16px 36px;
+    color: #ffffff;
+    background-color: #f0083f;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.single-details {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+    p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.7em;
+        color: #ffffff;
+    }
+}
+
+.contactus-sec .social-extra {
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+    li {
+        display: inline-block;
+    }
+    .btn {
+        width: 35px;
+        height: 35px;
+        background-color: #ffffff;
+        padding-top: 5px;
+        text-align: center;
+        margin: 5px;
+        color: #191d28;
+    }
+}
+
+/* #######################################
+
+    Responsivo
+
+####################################### */
+
+@media only screen and (max-width: 767px) {
+  .navbar .navbar-collapse {
+    text-align: center;
+    background-color: #1e222d;
+  }
+  .navbar-toggler {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  .hero-section .pos-r {
+    margin-top: 60px;
+  }
+  .hero-content {
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .title h3, .price-header h3 {
+    font-size: 28px;
+  }
+  .title p, .feature-inside ul li p, .our-team-sec .single-team p {
+    font-size: 14px;
+  }
+  .app-mock-up-img {
+    margin-bottom: 60px;
+  }
+  .feature-inside ul li h4 {
+    font-size: 20px;
+  }
+  .single-fact {
+    h5 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+  }
+  .price-table-sec .title {
+    padding-bottom: 60px;
+  }
+  .single-price-table {
+    margin-top: 30px;
+  }
+  .price-header {
+    img {
+      height: 200px;
+      width: 100%;
+    }
+    h4 {
+      font-size: 24px;
+    }
+    h3 small {
+      font-size: 14px;
+    }
+  }
+  .price-body ul li {
+    font-size: 16px;
+  }
+  .testimonials-sec {
+    .owl-nav {
+      left: 0;
+      bottom: -50px;
+    }
+    .title {
+      padding-bottom: 90px;
+    }
+  }
+  .our-team-sec .single-team h4 {
+    font-size: 24px;
+  }
+  .single-details p {
+    font-size: 14px;
+  }
+  .feature-inside .btn-group {
+    display: block;
+  }
+  .single-fact {
+    margin: 20px 0;
+  }
+  .contact-details {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero-content .btn-group {
+    display: inline;
+    .btn {
+      clear: both;
+      float: left;
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+    }
+  }
+  .feature-inside .btn-group .btn:nth-child(1) {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 992px) {
+  .navbar .navbar-collapse {
+    text-align: center;
+    background-color: #1e222d;
+  }
+  .navbar-toggler {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  .hero-content {
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .title h3, .price-header h3 {
+    font-size: 28px;
+  }
+  .title p, .feature-inside ul li p, .our-team-sec .single-team p {
+    font-size: 14px;
+  }
+  .feature-inside ul li h4 {
+    font-size: 20px;
+  }
+  .single-fact {
+    h5 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+  }
+  .price-header {
+    img {
+      height: 200px;
+    }
+    h4 {
+      font-size: 24px;
+    }
+    h3 small {
+      font-size: 14px;
+    }
+  }
+  .price-body ul li {
+    font-size: 16px;
+  }
+  .our-team-sec .single-team h4 {
+    font-size: 24px;
+  }
+  .single-details p {
+    font-size: 14px;
+  }
+  .feature-inside .btn-group {
+    display: block;
+    .btn:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  }
+}
