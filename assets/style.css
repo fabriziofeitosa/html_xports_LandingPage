@@ -496,7 +496,6 @@ ol, ul {
 .app-screenshot-sec {
   width: 100%;
   padding-top: 120px;
-  padding-bottom: 120px;
   position: relative;
 }
 
@@ -529,49 +528,34 @@ ol, ul {
 
 /* #######################################
 
-    Start Fun fact style
+    Funcionalidades
 
 ####################################### */
-.fun-fact {
-  width: 100%;
-  padding: 120px 0;
-  position: relative;
-  z-index: 9;
-  background-image: url(image/fun-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.app-functions {
+  margin-top: 100px;
 }
 
-.fun-fact:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #000000;
-  opacity: 0.8;
-  z-index: -9;
-}
-
-.single-fact {
-  width: 100%;
+.app-functions .item {
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.single-fact h2 {
-  font-weight: 600;
-  color: #00ff66;
-  font-size: 60px;
-  padding-bottom: 10px;
-  line-height: 1.2em;
-}
-
-.single-fact h5 {
-  color: #00ff66;
-  font-weight: 600;
+.app-functions .item .icone {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #00ff66;
+  color: #070a14;
+  display: inline-block;
   font-size: 24px;
+}
+
+.app-functions .item .titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 20px;
 }
 
 /* #######################################
