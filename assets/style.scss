@@ -353,8 +353,15 @@ ol, ul {
 }
  .app-mock-up-img {
     position: relative;
-    @media only screen and (max-width: 767px) {
-        margin-bottom: 60px;
+    img {
+        max-width: 100%;
+        @media screen and (max-width: 919px) {
+            max-height: 400px;
+            margin-bottom: 50px;
+        }
+        @media screen and (min-width: 920px) {
+            max-height: 650px;
+        }
     }
 }
  .banner-app-mock {

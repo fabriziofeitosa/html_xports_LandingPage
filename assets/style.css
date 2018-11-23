@@ -364,9 +364,20 @@ ol, ul {
   position: relative;
 }
 
-@media only screen and (max-width: 767px) {
-  .app-mock-up-img {
-    margin-bottom: 60px;
+.app-mock-up-img img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 919px) {
+  .app-mock-up-img img {
+    max-height: 400px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .app-mock-up-img img {
+    max-height: 650px;
   }
 }
 
