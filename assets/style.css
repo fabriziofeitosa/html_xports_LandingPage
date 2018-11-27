@@ -278,7 +278,6 @@ ol, ul {
 }
 
 .hero-section .btn-group .btn:nth-child(2) {
-  margin-left: 30px;
   background: none;
   color: #00ff66;
   border: 1px solid #00ff66;
@@ -287,6 +286,12 @@ ol, ul {
 @media only screen and (max-width: 400px) {
   .hero-section .btn-group .btn:nth-child(2) {
     margin-left: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-section .btn-group .btn:nth-child(2) {
+    margin-left: 30px;
   }
 }
 

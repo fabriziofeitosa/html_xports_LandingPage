@@ -273,13 +273,15 @@ ol, ul {
         outline: 0;
 
         &:nth-child(2) {
-            margin-left: 30px;
             background: none;
             color: $verde;
             border: 1px solid $verde;
             
             @media only screen and (max-width: 400px) {
                 margin-left: 5px;
+            }
+            @media only screen and (min-width: 768px) {
+                margin-left: 30px;
             }
         }
     }
