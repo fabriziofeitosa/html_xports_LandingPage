@@ -565,6 +565,40 @@ ol, ul {
     padding-bottom: 80px;
     position: relative;
     z-index: 9;
+
+    .single-details {
+        &.email {
+            a {
+                display: block;
+            }
+        }
+    }
+
+    a {
+        color: inherit;
+        &:hover {
+            color: $verde;
+        }
+    }
+
+    .btn-whats {
+        text-align: center;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: $verde;
+            color: $padrao;
+            line-height: 1;
+            padding: 15px 20px;
+            width: 100%;
+            border-radius: 100px;
+            font-weight: bold;
+            transition: all .2s;
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
 }
 
 #map {

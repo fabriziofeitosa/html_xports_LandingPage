@@ -587,6 +587,40 @@ ol, ul {
   z-index: 9;
 }
 
+.contactus-sec .single-details.email a {
+  display: block;
+}
+
+.contactus-sec a {
+  color: inherit;
+}
+
+.contactus-sec a:hover {
+  color: #00ff66;
+}
+
+.contactus-sec .btn-whats {
+  text-align: center;
+}
+
+.contactus-sec .btn-whats a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #00ff66;
+  color: #070a14;
+  line-height: 1;
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 100px;
+  font-weight: bold;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.contactus-sec .btn-whats a:hover {
+  background-color: #fff;
+}
+
 #map {
   width: 100%;
   height: 490px;
